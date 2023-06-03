@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "TestTabItemTemplate (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "TestTabItemTemplate (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
