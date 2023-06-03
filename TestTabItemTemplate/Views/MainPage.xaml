@@ -7,20 +7,49 @@
     Background="{ThemeResource SolidBackgroundFillColorBaseBrush}"
     mc:Ignorable="d">
 
-    <Grid x:Name="ContentArea">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="48" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+    <StackPanel >
 
-        <TextBlock
-            Grid.Row="0"
-            x:Uid="Main_Title"
-            Style="{StaticResource PageTitleStyle}" />
+        <TabView TabItemsSource="{x:Bind ViewModel.TabItems, Mode=TwoWay}" Width="500" Height="200" >
 
-        <Grid Grid.Row="1">
-            
-        </Grid>
-        
-    </Grid>
+            <!-- NG -->
+            <TabView.TabItemTemplate>
+                <DataTemplate >
+                    <TabViewItem >
+                        <TextBlock Text="ct" />
+                    </TabViewItem>
+                </DataTemplate>
+            </TabView.TabItemTemplate>
+
+            <!-- OK
+            <TabView.TabItemTemplate>
+                <DataTemplate >
+                    <TabViewItem Header="hd" >
+                        <TextBlock Text="ct" />
+                    </TabViewItem>
+                </DataTemplate>
+            </TabView.TabItemTemplate>
+            -->
+
+            <!-- OK
+            <TabView.TabItemTemplate>
+                <DataTemplate >
+                    <TabViewItem Content="ct" >
+                    </TabViewItem>
+                </DataTemplate>
+            </TabView.TabItemTemplate>
+            -->
+
+            <!-- OK
+            <TabView.TabItemTemplate>
+                <DataTemplate >
+                    <TabViewItem Header="hd" Content="ct" >
+                    </TabViewItem>
+                </DataTemplate>
+            </TabView.TabItemTemplate>
+            -->
+
+        </TabView>
+
+    </StackPanel>
+
 </Page>
